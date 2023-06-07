@@ -57,8 +57,9 @@ def banding(s,t,m,n, b): # set b to start from the difference in length of two s
 
     edit_distance = DP[m,n]
 
-    return edit_distance, DP, b
-
+    # return edit_distance, DP, b
+    return edit_distance, DP
+    
 ##########################
 
 
@@ -248,7 +249,8 @@ def astar_seed(A,B, m, n, k):
 
             # check if the key is the index m,n
             if key == (m,n):
-                return g[key], g, f
+                # return g[key], g, f
+                return g[key], g
             
             # define adjacent nodes of the key with their weights
             if key not in adj_list:
